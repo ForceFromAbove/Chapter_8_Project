@@ -4,19 +4,11 @@ import java.util.Scanner;
 
 public class Chapter_8_Project {
 
-    public static void main( String[] args ){           // Test driver
+    public static void main(String[] args) {           // Test driver
         Scanner user_Input = new Scanner(System.in);    // Used to get input from user
 
-        String Name;
-        String Address;
-        Long Phone_Number;
-        Float Latitude;
-        Float Longitude;
-        String Nature;
-        Bool Accidental_Call;
-        String Text_Log;
-        String Responding_Units;
-        Bool Status;
+
+
 
         System.out.println("Please enter decimal Number 1:");   // Reads in first double (Number 1)
         user_Number1 = user_Input.nextDouble();
@@ -28,13 +20,32 @@ public class Chapter_8_Project {
         System.out.printf("Quotient: %f%n", quotient);
         try {
             time.set(x, y, z);
-        }
-        catch (IllegalArgumentException e) {
+        } catch (IllegalArgumentException e) {
             System.out.println("Can you please repeat that?");
         }
     }
+}
 
-    private static void class Emergency(int x, contsturctory) {
+public class Emergency(int x, contsturctory){
+    if(Hardcode){
+        String Name;
+        String Address;
+        long Phone_Number;
+        float Latitude;
+        float Longitude;
+        String Nature;
+        boolean Accidental_Call;
+        String Text_Log;
+        String Responding_Units;
+        boolean Status;
+        boolean Hardcode = true;
+    Name="Aaron Ewing";
+    Address="123 Noneofyourbusiness Lane";
+    Phone_Number=9895550111;
+    Latitude=45.2345;
+
+
+    }else{
 
     }
 }
