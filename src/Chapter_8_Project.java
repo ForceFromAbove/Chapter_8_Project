@@ -5,7 +5,7 @@ public class Chapter_8_Project {
 
     public static void main(String[] args) {            // Test driver
         Scanner user_Input = new Scanner(System.in);    // Used to get input from user
-        Emergency emerg = new Emergency();
+        Emergency Emerg = new Emergency();
 
         boolean hardcoded = false;
         try {
@@ -16,15 +16,52 @@ public class Chapter_8_Project {
         }
 
         if (hardcoded = true) {
-            Emergency Name = "Bill Murry";
-            emerg.this.setName("Bill Murry");
-            Emergency Name = new Emergency("Bill Murry")
-            Name.getAddress("Bill Murry");
-            setAddress("Bill Murry");
-            this.Name = "Bill Murry";
-            getAddress();
-            Emergency.set()
             Emerg.setName("Bill Murry");
+            Emerg.setAddress("666 The Street With No Name");
+            Emerg.setPhone_Number("0118-999-881-999-119-725-3");
+            Emerg.setLatitude(0.00000000);
+            Emerg.setLongitude(-89.2);
+            Emerg.setName("Serial Buttstabber");
+            Emerg.setAccidental_Call(true);
+            Emerg.setText_Log("I hate prank calls, they keep me away from serious business! *eats doughnut*");
+            Emerg.setResponding_Units("None, they can fend off the buttstabber themselves! -.-");
+            Emerg.setStatus(false);
+        } else {
+
+            try {
+                System.out.println("This is 911, what is your address?");   // user inputs Address
+                Emerg.setAddress(user_Input.next());
+            } catch (InputMismatchException e) {
+                System.out.println("Please repeat that, I asked where you?");           // Error message
+            }
+
+            try {
+                System.out.println("What is the nature of your emergency?");   // user inputs nature of emergency
+                Emerg.setNature(user_Input.next());
+            } catch (InputMismatchException e) {
+                System.out.println("Please repeat that, what is currently happening?"); // Error message
+            }
+
+            try {
+                System.out.println("Alright, help is on the way. What is your name?");   // user inputs name
+                Emerg.setName(user_Input.next());
+            } catch (InputMismatchException e) {
+                System.out.println("Please repeat that, what is your name?"); // Error message
+            }
+
+            try {
+                System.out.printf("Alright %s, what is your phone number in case we lose contact?%n", Emerg.getName());   // user inputs phone number
+                Emerg.setNature(user_Input.next());
+            } catch (InputMismatchException e) {
+                System.out.println("Can you please repeat that, what is your phone number?"); // Error message
+            }
+
+            System.out.println("After the situation is over, the operator must enter in the appropriate information into the computer");
+            System.out.println("*The computer cursor blinks and has a simple command input line asking \"Caller's Latitude:\"");
+        }
+
+
+
         }
 
         System.out.printf("Difference: %f%n", difference);
@@ -39,16 +76,16 @@ public class Chapter_8_Project {
 
 public class Emergency {
     //if (Hardcode) {
-        private String Name = "Bill Murry";
-        private String Address = "666 The Street With No Name";
-        private String Phone_Number = "0118-999-881-999-119-725-3";
-        private double Latitude = 43.5630;
-        private double Longitude = -116.56598;
-        private String Nature = "Serial Buttstabber";
-        private boolean Accidental_Call = true;
-        private String Text_Log = "I hate prank calls, they keep me away from serious business! *eats doughnut*";
-        private String Responding_Units = "None, they can fend of the buttstabber themselves! -.-";
-        private boolean Status = false;
+        private String Name;// = "Bill Murry";
+        private String Address;// = "666 The Street With No Name";
+        private String Phone_Number;// = "0118-999-881-999-119-725-3";
+        private double Latitude;// = 43.5630;
+        private double Longitude;// = -116.56598;
+        private String Nature;// = "Serial Buttstabber";
+        private boolean Accidental_Call;// = true;
+        private String Text_Log;// = "I hate prank calls, they keep me away from serious business! *eats doughnut*";
+        private String Responding_Units;// = "None, they can fend off the buttstabber themselves! -.-";
+        private boolean Status;// = false;
 //        private boolean Hardcode = true;
 
     String getName() {
