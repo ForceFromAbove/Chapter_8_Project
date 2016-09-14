@@ -23,6 +23,8 @@ public class Chapter_8_Project {
             setAddress("Bill Murry");
             this.Name = "Bill Murry";
             getAddress();
+            Emergency.set()
+            Emerg.setName("Bill Murry");
         }
 
         System.out.printf("Difference: %f%n", difference);
@@ -37,16 +39,16 @@ public class Chapter_8_Project {
 
 public class Emergency {
     //if (Hardcode) {
-        private String Name;
-        private String Address;
-        private long Phone_Number;
-        private float Latitude;
-        private float Longitude;
-        private String Nature;
-        private boolean Accidental_Call;
-        private String Text_Log;
-        private String Responding_Units;
-        private boolean Status;
+        private String Name = "Bill Murry";
+        private String Address = "666 The Street With No Name";
+        private String Phone_Number = "0118-999-881-999-119-725-3";
+        private double Latitude = 43.5630;
+        private double Longitude = -116.56598;
+        private String Nature = "Serial Buttstabber";
+        private boolean Accidental_Call = true;
+        private String Text_Log = "I hate prank calls, they keep me away from serious business! *eats doughnut*";
+        private String Responding_Units = "None, they can fend of the buttstabber themselves! -.-";
+        private boolean Status = false;
 //        private boolean Hardcode = true;
 
     String getName() {
@@ -57,15 +59,15 @@ public class Emergency {
         return Address;
     }
 
-    long getPhone_Number() {
+    String getPhone_Number() {
         return Phone_Number;
     }
 
-    float getLatitude() {
+    double getLatitude() {
         return Latitude;
     }
 
-    float getLongitude() {
+    double getLongitude() {
         return Longitude;
     }
 
@@ -97,15 +99,15 @@ public class Emergency {
         this.Address = Address;
     }
 
-    void setPhone_Number(long Phone_Number) {
+    void setPhone_Number(String Phone_Number) {
         this.Phone_Number = Phone_Number;
     }
 
-    void setLatitude(float Latitude) {
+    void setLatitude(double Latitude) {
         this.Latitude = Latitude;
     }
 
-    void setLongitude(float Longitude) {
+    void setLongitude(double Longitude) {
         this.Longitude = Longitude;
     }
 
@@ -128,31 +130,6 @@ public class Emergency {
     void setStatus(boolean Status) {
         this.Status = Status;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    Name="Aaron Ewing";
-    Address="123 Noneofyourbusiness Lane";
-    Phone_Number=9895550111;
-    Latitude=45.2345;
 }
 
 
