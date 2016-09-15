@@ -9,30 +9,46 @@ public class Chapter_8_Project {
         boolean error = true;
 
         boolean hardcoded = false;
-  //      while (error == true) {
+        while (error) {
             try {
                 System.out.println("Please enter true for hardcode, false for user interaction:");   // user decides to use hardcoded values or not
                 hardcoded = user_Input.nextBoolean();
+                error = false;
             } catch (InputMismatchException e) {
                 error = true;
-                System.out.println("Sorry, didn't catch that ;) Please re-enter valid input");           // Error message
-                System.out.println("Please enter true for hardcode, false for user interaction:");
-                hardcoded = user_Input.nextBoolean();
-//            }
+                System.out.println("Sorry, didn't catch that ;) Please re-enter valid input");
+                user_Input.nextLine();
+                user_Input.nextLine();
+                // Error message
+                //System.out.println("Please enter true for hardcode, false for user interaction:");
+                //hardcoded = user_Input.nextBoolean();
+            }
             error = false;
         }
 
-        if (hardcoded = true) {
+        if (hardcoded == true) {
             Emerg.setName("Bill Murry");
             Emerg.setAddress("666 The Street With No Name");
             Emerg.setPhone_Number("0118-999-881-999-119-725-3");
             Emerg.setLatitude(0.00000000);
             Emerg.setLongitude(-89.2);
-            Emerg.setName("Serial Buttstabber");
+            Emerg.setNature("Serial Buttstabber");
             Emerg.setAccidental_Call(true);
-            Emerg.setText_Log("I hate prank calls, they keep me away from serious business! *eats doughnut*");
             Emerg.setResponding_Units("None, they can fend off the buttstabber themselves! -.-");
+            Emerg.setText_Log("I hate prank calls, they keep me away from serious business! *eats doughnut*");
             Emerg.setStatus(false);
+
+            System.out.printf("Name: %s%n", Emerg.getName());
+            System.out.printf("Address: %s%n", Emerg.getAddress());
+            System.out.printf("Phone Number: %s%n", Emerg.getPhone_Number());
+            System.out.printf("Latitude: %f%n", Emerg.getLatitude());
+            System.out.printf("Longitude: %f%n", Emerg.getLongitude());
+            System.out.printf("Nature of call: %s%n", Emerg.getNature());
+            System.out.printf("Accidental Call: %b%n", Emerg.getAccidental_Call());
+            System.out.printf("Responding Units: %s%n", Emerg.getResponding_Units());
+            System.out.printf("Text Log of operator: %s%n", Emerg.getText_Log());
+            System.out.printf("Status of emergency still ongoing: %b%n", Emerg.getStatus());
+
         } else {
 
             try {
@@ -107,10 +123,17 @@ public class Chapter_8_Project {
                 System.out.println("ERROR!!! Invalid input data type!"); // Error message
             }
 
-            System.out.println("Thank you for your input, mindless employee whose position *I* shall soon overtake ̿̿ ̿̿ ̿̿ ̿'̿'\\̵͇̿̿\\З= ( ▀ ͜͞ʖ▀) =Ε/̵͇̿̿/’̿’̿ ̿ ̿̿ ̿̿ ̿̿");
+            try {
+                System.out.println("Thank you for your input, mindless employee whose position *I* shall soon overtake. ( ▀͜͞ʖ▀) =Ε/̵͇̿̿/’̿’̿ ̿ ̿̿ ̿̿ ̿̿");
+                System.out.println("( ▀͜͞ʖ▀) =Ε/̵͇̿̿/’̿’̿ ̿ ̿̿ ̿̿ ̿̿ ̿̿  Do you accept your fate? (true/false)");
+                Emerg.setUsers_Fate(user_Input.nextBoolean());
+            } catch (InputMismatchException e) {
+                System.out.println("ERROR!!! Invalid input data type!"); // Error message
+            }
+
+            System.out.println("It doesn't matter if you accept it, it's going to happen O.O");
+
         }
-
-
     }
 }
 

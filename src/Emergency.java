@@ -1,16 +1,15 @@
 public class Emergency {
-    //if (Hardcode) {
-        private String Name;// = "Bill Murry";
-        private String Address;// = "666 The Street With No Name";
-        private String Phone_Number;// = "0118-999-881-999-119-725-3";
-        private double Latitude;// = 43.5630;
-        private double Longitude;// = -116.56598;
-        private String Nature;// = "Serial Buttstabber";
-        private boolean Accidental_Call;// = true;
-        private String Text_Log;// = "I hate prank calls, they keep me away from serious business! *eats doughnut*";
-        private String Responding_Units;// = "None, they can fend off the buttstabber themselves! -.-";
-        private boolean Status;// = false;
-//        private boolean Hardcode = true;
+    private String Name;
+    private String Address;
+    private String Phone_Number;
+    private double Latitude;
+    private double Longitude;
+    private String Nature;
+    private boolean Accidental_Call;
+    private String Text_Log;
+    private String Responding_Units;
+    private boolean Status;
+    private boolean Users_Fate;
 
     String getName() {
         return this.Name;
@@ -90,5 +89,9 @@ public class Emergency {
 
     void setStatus(boolean Status) {
         this.Status = Status;
+    }
+
+    void setUsers_Fate(boolean Users_Fate) {
+        this.Users_Fate = Users_Fate;
     }
 }
