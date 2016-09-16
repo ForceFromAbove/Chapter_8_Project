@@ -51,6 +51,10 @@ public class Emergency {
         return Status;
     }
 
+    boolean getUsers_Fate() {
+        return Users_Fate;
+    }
+
     void setName(String Name) {
         this.Name = Name;
     }
